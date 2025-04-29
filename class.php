@@ -12,8 +12,10 @@ $xmlDoc -> load('note.xml');
 
 $x = $xmlDoc ->documentElement;
 foreach($x ->childNodes as $item){
-    echo $item ->nodeName.":".$item->nodeValue ;
-    echo "<br>";
+    if ($item->nodeType == XML_ELEMENT_NODE) { // Ignores things like whitespace and text nodes
+        echo $item->nodeName . ": " . $item->nodeValue . "<br>";
+    }
+ 
 }
 
 ?>
