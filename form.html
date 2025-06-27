@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+    <form action="process.form.php" method="POST">
+    <h1>Contact</h1>
+    <label for="name" >Name</label>
+    <input type="text" id="name" name="name">
+
+    <label for="message">Message</label>
+    <textarea name="message" id="message" ></textarea>
+  
+    <label for="priority">priority</label>
+    <select  id="priority" name="priority">
+        <option value="1">low</option>
+        <option value="2">high</option>
+        <option value="3">medium</option>
+    </select>
+
+    <fieldset>
+        <legend>type</legend>
+    <label>
+        <input type="radio" name="type" value="1">
+    complaint
+    </label>
+    <br>
+     <label>
+        <input type="radio" name="type" value="2">
+    suggestion
+    </label>
+    </fieldset>
+   <label>    <input type="checkbox" name="terms">
+    I agree to the terms and conditions
+</label>
+<br>
+<button>send</button>
+
+    </form>
+</body>
+</html>

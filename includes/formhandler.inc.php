@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
 
     try {
-        $pdo = require_once "dbh.inc.php";
+        $pdo = require "dbh.inc.php";
 
         $query = "INSERT INTO users (username, pwd, email) VALUES (?, ?, ?);";
         $stmt = $pdo->prepare($query);
